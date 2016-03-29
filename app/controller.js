@@ -13,8 +13,8 @@
   function MainController($scope,LocalStorage, QueryService,getDataFromAPI) {
 
       var self = this;
-      fetchSearchDataGenericQueryServiceMethod();
-      //fetchSearchDataByFactoryMethod();
+      //fetchSearchDataGenericQueryServiceMethod();
+      fetchSearchDataByFactoryMethod();
 
       //LocalStorage.set('username','neeraj');
 
