@@ -22,7 +22,8 @@
       var deferred = $q.defer();
       $http({
         method : 'GET',
-        url : CONSTANTS.API_URL + 'search/?tags=samsung&tags=mobiles&facet=1&page=1'
+        url : CONSTANTS.API_URL + 'search/?tags=samsung&tags=mobiles&facet=1&page=1',
+        dataType : 'jsonp'
         //params : request
       }).then(function success(response){
         console.log(response);

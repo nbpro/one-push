@@ -32,6 +32,7 @@
       });
 
     $httpProvider.interceptors.push('authInterceptor');
+    $httpProvider.defaults.useXDomain = true;
 
   }
 
@@ -52,7 +53,6 @@
         request: function(config) {
           config.headers = config.headers || {};
           config.headers.authorization = true;
-
         return config;
       },
 

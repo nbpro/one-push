@@ -4,7 +4,11 @@ var gulp            = require('gulp'),
     reload          = browserSync.reload,
     $               = require('gulp-load-plugins')(),
     del             = require('del'),
-    runSequence     = require('run-sequence');
+    runSequence     = require('run-sequence'),
+    url             = require('url'),
+    proxyMiddleware = require('proxy-middleware');
+
+  proxy = proxyMiddleware('/#/', {target: 'http://api.buyingiq.com'});
 
 
 // optimize images
@@ -23,7 +27,9 @@ gulp.task('images', function() {
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-      baseDir: "./"
+      baseDir: "./",
+      port : 3000,
+      middleware: [proxy]
     }
   });
 });
@@ -68,7 +74,8 @@ gulp.task('fonts', function() {
 gulp.task('server', function(done) {
   return browserSync({
     server: {
-      baseDir: './'
+      baseDir: './',
+      middleware :[proxy]
     }
   }, done);
 });
@@ -187,7 +194,7 @@ gulp.task('templates', function() {
     ])
     .pipe($.minifyHtml())
     .pipe($.angularTemplatecache({
-      module: 'boilerplate'
+      module: 'mainApp'
     }))
     .pipe(gulp.dest('_build/js'));
 });
