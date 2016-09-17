@@ -9,8 +9,7 @@
     ])
     .config(config);
 
-  // safe dependency injection
-  // this prevents minification issues
+
   config.$inject = ['$routeProvider', '$locationProvider', '$httpProvider', '$compileProvider'];
 
   /**
@@ -79,9 +78,7 @@
   run.$inject = ['$rootScope', '$location'];
 
   function run($rootScope, $location) {
-
     // put here everything that you need to run on page load
-
   }
 
 

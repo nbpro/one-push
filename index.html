@@ -9,12 +9,8 @@
 		<base href="/">
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>AngularJS Boilerplate</title>
-		<meta name="description" content="Angular JS project">
-
-		<!-- mobile meta -->
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
+		<title>One-push-app</title>
+		<meta name="description" content="HackerEarth challenge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 
@@ -35,11 +31,11 @@
 	<body class="main-wrapper">
 	
 		<!--[if lt IE 8]>
-		    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<p> please upgrade your browser or tweet me at @neerajpro </p>
 		<![endif]-->
 
 		<!-- Navigation -->
-		<!--<main-nav></main-nav>-->
+		<main-nav></main-nav>
 
 		<!-- Main view for templates -->
 		<div data-ng-view="" class="container"></div>
@@ -76,12 +72,6 @@
 	<!-- build:mainapp js/mainapp.js -->
 	<script type="text/javascript" src="app/factory.js"></script>
 	<script type="text/javascript" src="app/controller.js"></script>
+	<script type="text/javascript" src="components/directives/main.nav.directive.js"></script>
 	<!-- endbuild -->
-
-	<!-- templates from $templateCache -->
-	<!-- build:templates -->
-	<!-- endbuild -->
-	
-
-
 </html>

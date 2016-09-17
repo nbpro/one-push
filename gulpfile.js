@@ -5,10 +5,9 @@ var gulp            = require('gulp'),
     $               = require('gulp-load-plugins')(),
     del             = require('del'),
     runSequence     = require('run-sequence'),
-    url             = require('url'),
-    proxyMiddleware = require('proxy-middleware');
+    url             = require('url');
 
-  proxy = proxyMiddleware('/#/', {target: 'http://api.buyingiq.com'});
+  //proxy = proxyMiddleware('/#/', {target: 'http://localhost:3030'});
 
 
 // optimize images
@@ -28,8 +27,7 @@ gulp.task('browser-sync', function() {
   browserSync({
     server: {
       baseDir: "./",
-      port : 3000,
-      middleware: [proxy]
+      port : 3000
     }
   });
 });

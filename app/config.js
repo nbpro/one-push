@@ -2,7 +2,7 @@
   angular
   	.module('mainApp')
     .constant('CONSTANTS', {
-      'API_URL': 'http://api.buyingiq.com/v1/'
+      'API_URL': 'https://hackerearth.0x10.info/api/'
     });
 
 

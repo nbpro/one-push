@@ -1,32 +1,24 @@
-<h2 class="text-center"></h2>
 <div>
-    <small>Total Time to Search : <span ng-bind="searchData.took"></span> seconds</small>
-</div>
-<div>
-    <small>Total Results : <span ng-bind="searchData.total"></span> Results</small>
+    <small>Total Results : <span ng-bind="totalDataCount"></span> Results</small>
 </div>
 <div>
     <div>
         <table>
             <tr>
-                <th>Name           </th>
-                <th>Product ID     </th>
-                <th>Brands         </th>
-                <th>Average Ratings</th>
-                <th>Category       </th>
+                <th>Title          </th>
+                <th>ID             </th>
+                <th>URL Address    </th>
+                <th>Favicon Image  </th>
+                <th>Tag            </th>
             </tr>
-            <tr ng-repeat="products in searchData.products">
-                <td>{{products.name}}  </td>
+            <tr ng-repeat="products in searchData">
+                <td>{{products.title}}  </td>
                 <td>{{products.id}}    </td>
-                <td>{{products.brand}} </td>
-                <td>{{products.avg_rating}} </td>
-                <td>{{products.category}} </td>
+                <td><a ng-href='{{products.url_address}}'>{{products.url_address}}</a></td>
+                <td><img async ng-src='{{products.favicon_image}}'/></td>
+                <td>{{products.tag}} </td>
             </tr>
         </table>
     </div>
-</div>
-
-<div class="text-center">
-    <!--<small>Images courtesy of <a target="_blank" href="http://unsplash.com">unsplash.com</a></small>-->
 </div>
 
