@@ -1,8 +1,8 @@
 {
-  "name": "angularjs-boilerplate",
-  "version": "1.1.7",
-  "license": "MIT",
-  "description": "Simple AngularJS Boilerplate to kick start your new project with SASS support and Gulp watch/build tasks",
+  "name": "push-one-app",
+  "version": "0.1",
+  "license": "NA",
+  "description": "This is simple app that shows the popular names throughout internet",
   "main": "app/app.js",
   "devDependencies": {
     "browser-sync": "^1.9.2",
@@ -43,15 +43,12 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "github.com/nbpro/one-push-app"
   },
   "keywords": [
     "angular",
     "angularjs",
-    "boilerplate",
-    "front-end",
-    "app",
-    "single-page",
+    "neerajpro",
     "spa"
   ],
   "author": "Neeraj Kumar",
@@ -59,5 +56,5 @@
   "bugs": {
     "url": ""
   },
-  "homepage": ""
+  "homepage": "neerajpro.in"
 }

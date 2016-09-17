@@ -10,29 +10,18 @@
       loadData: loadData
     };
 
-
-     //var request = {
-     //  tags : 'mobiles',
-     //  tags : 'samsung',
-     //  facet :'1',
-     //  page : '1'
-     //};
-
     function loadData(){
       var deferred = $q.defer();
       $http({
         method : 'GET',
-        url : CONSTANTS.API_URL + 'search/?tags=samsung&tags=mobiles&facet=1&page=1',
+        url : CONSTANTS.API_URL + 'one-push?type=json&query=list_websites',
         dataType : 'jsonp'
-        //params : request
       }).then(function success(response){
         console.log(response);
         deferred.resolve(response);
-        //return response.data;
       },function error(error){
         console.log(error);
         deferred.resolve(error);
-        //return error;
       });
       return deferred.promise;
     }
